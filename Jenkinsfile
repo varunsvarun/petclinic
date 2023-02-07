@@ -13,7 +13,7 @@ pipeline {
        }
        stage('docker_build'){
           steps{
-              sh 'docker build --tag petclinic-app .'
+              sh 'docker build -t petclinic-app -f Dockerfile .'
               sh 'docker save -o petclinic-app.tar petclinic-app:latest'
               sh 'chown jenkins:jenkins petclinic-app.tar'
           }
