@@ -1,5 +1,9 @@
 ---
-  - name: Copy a single file
-    win_copy:
-      src: /var/lib/jenkins/workspace/MypipelineProject/*.tar
-      dest: C:\Users\Administrator\Upload_files_from_Jenkins\
+- hosts: dotnet_dev
+  become: yes
+  tasks:
+    - name: Copy the tar file into Windows server
+      copy:
+        src: /var/lib/jenkins/workspace/MypipelineProject/petclinic-app.tar
+        dest: C:\Deployment_Directory
+
