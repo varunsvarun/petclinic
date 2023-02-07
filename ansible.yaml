@@ -1,6 +1,5 @@
 ---
 - hosts: dotnet_dev
-  become: yes
   tasks:
     - name: Copy the tar file into Windows server
       copy:
