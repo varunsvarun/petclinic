@@ -1,0 +1,5 @@
+---
+  - name: Copy a single file
+    win_copy:
+      src: /var/lib/jenkins/workspace/MypipelineProject/*.tar
+      dest: C:\Users\Administrator\Upload_files_from_Jenkins\
