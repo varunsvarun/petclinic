@@ -4,6 +4,6 @@
   tasks:
     - name: Copy the tar file into Windows server
       copy:
-        src: /var/lib/jenkins/workspace/MypipelineProject/petclinic-app.tar
+        src: /var/lib/jenkins/workspace/SPC_main/petclinic-app.tar
         dest: C:\Deployment_Directory
 
